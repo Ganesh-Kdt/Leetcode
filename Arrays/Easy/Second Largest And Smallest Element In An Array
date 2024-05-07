@@ -42,3 +42,8 @@ public class Solution {
         return new_arr;
     }
 }
+
+Summary - 
+1. For second largest element it should be smaller than the largest and bigger than every other element in the array.
+2. So we first find the largest element.
+3 Then we find an element which is smaller than the max but larger than everyone else.
