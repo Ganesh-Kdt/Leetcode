@@ -5,13 +5,12 @@ class Solution {
             if(nums[i]==1){
                 sum++;
             }
-            else{
-                 sum=0;
-            }
-            if(max<sum){
+            if(nums[i]==0 || i==nums.length-1){
+                if(max<sum){
                     max=sum;
-                   
                 }
+                sum=0;
+            }
         }
         return max;
     }
