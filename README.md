@@ -1,2 +1,2 @@
-# Leetcode
-Leetcode solutions
+# Leetcode and GeeksForGeeks
+Leetcode and GeeksForGeeks solutions
