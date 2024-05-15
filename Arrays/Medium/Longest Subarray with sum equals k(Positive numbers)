@@ -83,3 +83,5 @@ Code -
         return maxLen;
     }
 
+Note - 
+If the array contains negative values, we cannot use 2 pointer algo. We can only use sliding window and hashmap.
