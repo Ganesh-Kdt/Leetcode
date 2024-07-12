@@ -1,15 +1,27 @@
 class Solution {
     public String reverseWords(String s) {
-        StringBuilder sb = new StringBuilder(); 
-        String arr[] = s.split(" ");
-        for(int i=arr.length-1;i>=0;i--){
-            if(!arr[i].equals("")){
-                sb.append(arr[i]);
-                sb.append(" ");
+        String rword="";
+        String temp="";
+        for(int i=0;i<=s.length()-1;i++){
+             if(s.charAt(i)!=' '){
+                 temp += s.charAt(i);
+             }
+            else{
+                if(temp!=""){
+                if(rword!="")
+                    rword = temp + " " + rword;
+                else
+                    rword = temp;
+                }
+                temp="";
             }
         }
-        
-        return sb.toString().trim();
+        if(temp!=""){
+            if(rword!="")
+                rword = temp + " " + rword;
+            else
+                rword = temp;
+        }
+        return rword;
     }
-    
 }
