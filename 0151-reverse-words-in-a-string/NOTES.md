@@ -9,6 +9,7 @@ OR
 3.Once space character is encountered, stop and concat this string to a reverseString variable.
 4.Now make the temp string empty and again keep concating characters untill space is found.
 5.Once space is encountered then concat the temp string to the reverseString.
-6.One big thing to learn from this problem is reverse concatenation.
+6.One big thing to learn from this problem is **reverse concatenation.**
 7.Normally we do s = s+temp;
 8.but here we will do s=temp+s;
+9.This means going forward we can iterate the loop from the front and concat or we can iterate from the back and **reverse concat**.
