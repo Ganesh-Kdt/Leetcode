@@ -4,6 +4,9 @@ A.Brute force aproach -
 1.We will find number of substrings with k distinct characters for each character and add the total count to find count of substrings.
 2.This will take 2 for loops and thus the time complexity will be O(n**2).
 
+Now to move to optimized solution think about how to use the brute force approach but in O(n) time complexity.
+I will use the same concept of finding the # of substrings with k distinct characters for each character. But to do it in O(n) I will use two pointers i and j. And I can use the formula j-i+1 to find # of substrings with k distinct characters. But the problem with the formula is - eg. for string s="abc" and k=2. for chracter b my value will be 2 ('b','ab'). So for optimized approach with 2 pointers and the given formula I can never find exact number of substring with k distinct characters. Instead the formula is giving me # of substrings with atmost k distinct characters. So # of substrings with k distinct characters = # of substrings with atmost k characters - # of sbstrings with atmost k-1 character. This is how we arrive to this formula.
+
 B.Optimized Solution -
 1.Similar to the brute force approach I will find the number of substrings for each character but it will be for atmost k distinct characters.
 2.I will use sliding window along with 2 pointers and hashmap.
