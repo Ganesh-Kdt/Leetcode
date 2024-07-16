@@ -15,7 +15,6 @@ class Solution {
                 low=mid+1;
             }
         }
-        
         low=0;mid=0;high=nums.length-1;
         
         while(low<=high){
