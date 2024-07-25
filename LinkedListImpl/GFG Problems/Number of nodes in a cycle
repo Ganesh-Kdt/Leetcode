@@ -46,6 +46,25 @@ class Solution
             index++;
         }
         return 0;
+
+        OR
+
+        Node fast,slow;
+        fast=slow=head;
+        int index=1;
+        while(fast!=null && fast.next!=null){
+            fast=fast.next.next;
+            slow=slow.next;
+            if(slow==fast){
+                fast=fast.next;
+                while(fast!=slow){
+                    index++;
+                    fast=fast.next;
+                }
+                return index;
+            }
+        }
+        return 0;
     }
 }
 
@@ -53,3 +72,4 @@ Intuition -
 1.We have to use HashMap which will store the node refernce and the index of the node.
 2.If there is a cycle then the same node refernce will be encountered as a key in the HashMap.
 3.In this case we will return the number of nodes in the cycle using the formula - current index(index of the last node+1) - index of the node at which the cycle started. 
+4.We can also use fast and slow pointer. Once we find the collission spot we can use a temp variable which will run the whole cycle once and we will use a counter to count the length of the cycle.
